@@ -56,6 +56,7 @@ class Style extends Evented {
         this.map = map;
         this.animationLoop = (map && map.animationLoop) || new AnimationLoop();
         this.dispatcher = new Dispatcher(getWorkerPool(), this);
+        // TODO: Where we can increase sprite size?
         this.spriteAtlas = new SpriteAtlas(1024, 1024);
         this.spriteAtlas.setEventedParent(this);
         this.lineAtlas = new LineAtlas(256, 512);
